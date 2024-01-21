@@ -1,0 +1,134 @@
+cabal-version: 2.2
+
+-- This file has been generated from package.yaml by hpack version 0.36.0.
+--
+-- see: https://github.com/sol/hpack
+
+name:           HGraphics
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/HGraphics#readme>
+homepage:       https://github.com/githubuser/HGraphics#readme
+bug-reports:    https://github.com/githubuser/HGraphics/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2023 Author name here
+license:        BSD-3-Clause
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    CHANGELOG.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/HGraphics
+
+library
+  exposed-modules:
+      HGraphics.Image
+      HGraphics.Obj
+      HGraphics.Type
+      HGraphics.Vec.Vec2
+      HGraphics.Vec.Vec3
+      HGraphics.Vec.Vec4
+  other-modules:
+      Paths_HGraphics
+  autogen-modules:
+      Paths_HGraphics
+  hs-source-dirs:
+      src
+  default-extensions:
+      OverloadedRecordDot
+      DuplicateRecordFields
+      FlexibleInstances
+      FlexibleContexts
+  build-depends:
+      JuicyPixels
+    , base
+    , data-default
+    , lens
+    , vector
+    , wavefront
+  default-language: Haskell2010
+
+executable sdltriangle
+  main-is: Main.hs
+  other-modules:
+      Paths_HGraphics
+  autogen-modules:
+      Paths_HGraphics
+  hs-source-dirs:
+      app/sdltriangle
+  default-extensions:
+      LambdaCase
+      RecordWildCards
+      DataKinds
+      OverloadedRecordDot
+      DisambiguateRecordFields
+      DuplicateRecordFields
+      OverloadedStrings
+      FlexibleContexts
+      GADTs
+      NoMonomorphismRestriction
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
+  build-depends:
+      base
+    , bytestring
+    , extra
+    , lens
+    , managed
+    , say
+    , sdl2
+    , text
+    , transformers
+    , vector
+    , vulkan
+    , vulkan-utils
+  default-language: Haskell2010
+
+executable tinyrenderer
+  main-is: Main.hs
+  other-modules:
+      Bresenham
+      Paths_HGraphics
+  autogen-modules:
+      Paths_HGraphics
+  hs-source-dirs:
+      app/tinyrenderer
+  default-extensions:
+      OverloadedRecordDot
+      FlexibleContexts
+      DuplicateRecordFields
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      HGraphics
+    , base
+    , vector
+  default-language: Haskell2010
+
+test-suite HGraphics-test
+  type: exitcode-stdio-1.0
+  main-is: Main.hs
+  other-modules:
+      LensTest.LensExerciseTest
+      LensTest.LensTest
+      LensTest.LensWavefrontOBJTest
+      TypeTest
+      Paths_HGraphics
+  autogen-modules:
+      Paths_HGraphics
+  hs-source-dirs:
+      test
+  default-extensions:
+      OverloadedRecordDot
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      HGraphics
+    , HUnit
+    , base
+    , data-default
+    , lens
+    , text
+    , vector
+    , wavefront
+  default-language: Haskell2010

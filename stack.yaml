@@ -1,0 +1,10 @@
+resolver: nightly-2023-12-16
+
+packages:
+- .
+
+extra-deps:
+- vulkan-3.26.1
+- vulkan-utils-0.5.10.6
+- git: https://github.com/ZichaoNickFox/wavefront
+  commit: '18de3d44ea115b3a0ab72b8b8ecdd61f28bfeb5e'
