@@ -121,6 +121,7 @@ test-suite HGraphics-test
       test
   default-extensions:
       OverloadedRecordDot
+      RankNTypes
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       HGraphics

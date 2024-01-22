@@ -97,6 +97,7 @@ tests:
     - -with-rtsopts=-N
     default-extensions:
     - OverloadedRecordDot
+    - RankNTypes
     dependencies:
     - base
     - HUnit
